@@ -1,198 +1,156 @@
 <div align="center">
 
-# Curiosity Driven Engineering
+# SPEC-001 · SIJU SURESH
 
-### Building systems. Exploring ideas. Understanding what happens underneath.
+**status** `active` · **version** `4.x` · **environment** `production` · **maintainer** `self`
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&pause=1000&center=true&vCenter=true&width=800&lines=Software+Engineer;Backend+Systems+Builder;AI+Infrastructure+Explorer;FastAPI+%7C+Django+%7C+RAG+%7C+MCP;Always+Asking+Why+It+Works" />
+curiosity-driven engineering — documented
 
 </div>
 
 ---
 
-```bash
-$ whoami
-```
+## Abstract
 
-I'm **Siju Suresh**.
+I ask the same question about every system I meet: **why was it built this way?**
 
-A Software Engineer focused on backend systems, AI infrastructure, and understanding how technology works under the hood.
-
-Most people learn technologies.
-
-I prefer learning systems.
-
-When I encounter something new, I usually ask:
-
-- Why was it designed this way?
-- What happens internally?
-- What problem does it solve?
-- What breaks when it scales?
-
-This profile is a collection of experiments, projects, and notes from that journey.
+It seemed only fair to turn that question on myself. So instead of a profile, this is a spec — architecture, design rationale, known behaviors, changelog. Read it like any good documentation: skim freely, go deep where curious.
 
 ---
 
-```bash
-$ current_focus
-```
-
-```yaml
-status: building
-
-active_projects:
-  - MCP Server Generator
-  - RAGBoard
-  - JD Builder
-  - AI Assessment Systems
-
-research_topics:
-  - Agentic Workflows
-  - Multi-Agent Systems
-  - Retrieval-Augmented Generation
-  - System Design
-  - AI Infrastructure
-```
-
----
-
-```bash
-$ cat engineering_philosophy.txt
-```
+## 1. System Architecture
 
 ```text
-Software is more than code.
-
-A REST API is a distributed conversation.
-
-A database is compressed business knowledge.
-
-An LLM is a reasoning engine with constraints.
-
-Architecture is the art of managing complexity.
-
-The deeper I go, the more interesting engineering becomes.
+                  ┌─────────────────────────────────┐
+                  │           INPUT LAYER           │
+                  │  unfamiliar systems · problems  │
+                  │      the question "why?"        │
+                  └────────────────┬────────────────┘
+                                   │  no rate limiter (by design)
+                                   ▼
+                  ┌─────────────────────────────────┐
+                  │         PROCESSING CORE         │
+                  │  first-principles decomposition │
+                  │   read the source · trace the   │
+                  │  request · find the constraint  │
+                  └────────────────┬────────────────┘
+                        ┌──────────┴──────────┐
+                        ▼                     ▼
+            ┌──────────────────────┐ ┌──────────────────────┐
+            │  PERSISTENT STORAGE  │ │     OUTPUT LAYER     │
+            │  knowledge domains   │ │   shipped systems    │
+            │       (see §3)       │ │       (see §2)       │
+            └──────────────────────┘ └──────────────────────┘
 ```
 
 ---
 
-```bash
-$ ls projects/
+## 2. Production Systems
+
+Every system here started as a question that wouldn't leave me alone.
+
+### `mcp-generator`
+**Origin question:** why is wiring LLMs to real-world APIs still manual work?
+Turns OpenAPI specifications into production-ready MCP servers — automated code generation with AI-assisted workflows.
+`python` `fastapi` `mcp` `codegen`
+
+### `ragboard`
+**Origin question:** why can't organizations just talk to their own documents?
+A role-aware knowledge platform — query internal docs through retrieval pipelines, vector search, and access-aware answers.
+`rag` `vector-search` `langchain` `postgresql`
+
+### `jd-builder`
+**Origin question:** why does a hiring document take hours when the intent takes minutes?
+Transforms hiring requirements into structured job descriptions and intelligent screening workflows.
+`llm-workflows` `fastapi` `structured-generation`
+
+### `iveye`
+**Origin question:** why does learning software treat every learner the same?
+An adaptive learning platform — AI-assisted education, quiz generation, and personalized pacing.
+`adaptive-learning` `llm` `assessment-systems`
+
+---
+
+## 3. Runtime Dependencies
+
+```toml
+[core]
+language    = "python"
+frameworks  = ["fastapi", "django"]
+storage     = ["postgresql"]
+
+[ai]
+platforms   = ["openai", "langchain"]
+patterns    = ["rag", "mcp", "vector-search", "agentic-workflows"]
+
+[infrastructure]
+runtime     = ["docker", "linux", "nginx"]
+cloud       = ["aws"]
+
+[meta]
+disciplines = ["system-design", "distributed-systems", "api-architecture"]
 ```
 
-### MCP Generator
+---
 
-Turning OpenAPI specifications into production-ready MCP servers through automated code generation and AI-assisted workflows.
+## 4. Known Behaviors
+
+| ID | Observed behavior | Status |
+|----|-------------------|--------|
+| `BHV-001` | Recursion on "why?" has unbounded depth | by design |
+| `BHV-002` | Cannot use a tool without reading how it works underneath | won't fix |
+| `BHV-003` | Treats a REST API as a distributed conversation | documented |
+| `BHV-004` | Treats a database schema as compressed business knowledge | documented |
+| `BHV-005` | Reads source code before Stack Overflow | escalating |
+| `BHV-006` | Considers "it works, don't touch it" an open incident | under review |
 
 ---
 
-### RAGBoard
-
-A role-aware knowledge platform that enables organizations to query internal documents using AI, vector search, and retrieval pipelines.
-
----
-
-### JD Builder
-
-An AI-powered platform that transforms hiring requirements into structured job descriptions and intelligent screening workflows.
-
----
-
-### Iveye
-
-An adaptive learning platform focused on AI-assisted education, quiz generation, and personalized learning experiences.
-
----
-
-```bash
-$ tree knowledge/
-```
+## 5. Changelog
 
 ```text
-knowledge
-├── backend
-│   ├── FastAPI
-│   ├── Django
-│   ├── PostgreSQL
-│   └── REST APIs
-│
-├── ai
-│   ├── OpenAI
-│   ├── LangChain
-│   ├── RAG
-│   ├── MCP
-│   └── Vector Search
-│
-├── infrastructure
-│   ├── Docker
-│   ├── AWS
-│   ├── Linux
-│   └── Nginx
-│
-└── architecture
-    ├── System Design
-    ├── Scalable Services
-    ├── Distributed Systems
-    └── Software Patterns
+v4.x   current   AI infrastructure — RAG pipelines, MCP tooling, agentic systems
+v3.x             production backend — scalable APIs, multi-service platforms
+v2.x             framework depth — Django & FastAPI internals, async, deployment
+v1.0             first production deploy; learned the difference between
+                 "works on my machine" and "works"
 ```
 
 ---
 
-```bash
-$ tech_stack
+## 6. Active Branches
+
+```text
+research/agentic-workflows       multi-agent coordination patterns
+research/distributed-systems     the hard parts, on purpose
+feature/mcp-ecosystem            tooling around Model Context Protocol
+perf/system-design               architectures that survive scale
 ```
-
-<p align="left">
-
-<img src="https://skillicons.dev/icons?i=python,fastapi,django,postgres,docker,aws,linux,git,vscode" />
-
-</p>
 
 ---
 
-```bash
-$ github_stats
-```
+## 7. Telemetry
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=ssijup&show_icons=true&hide_border=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ssijup&layout=compact&hide_border=true" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=ssijup&show_icons=true&hide_border=true" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ssijup&layout=compact&hide_border=true" />
 </p>
 
 ---
 
-```bash
-$ currently_learning
-```
+## 8. API Reference
 
-```text
-→ Advanced System Design
-→ AI Infrastructure
-→ MCP Ecosystem
-→ Agentic Systems
-→ Scalable Backend Architectures
-```
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | [`/connect`](https://www.linkedin.com/in/siju-suresh-901128200/) | open to conversations about systems, AI infrastructure, and why things work |
+| `GET` | [`/repositories`](https://github.com/ssijup?tab=repositories) | the code behind this document |
 
 ---
 
-```bash
-$ connect
-```
+<div align="center">
 
-🌐 LinkedIn  
-https://www.linkedin.com/in/siju-suresh-901128200/
+*Most systems get documented after they stop changing. This one is still in active development.*
 
-💻 GitHub  
-https://github.com/ssijup
+`EOF`
 
----
-
-```bash
-$ exit
-```
-
-> Curiosity is my framework.
->
-> Engineering is how I explore.
->
-> Software is how I leave notes behind.
+</div>
