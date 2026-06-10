@@ -1,74 +1,198 @@
-# Siju Suresh
+<div align="center">
 
-Software Engineer specializing in Backend Systems, AI Infrastructure, and LLM-powered Applications.
+# Curiosity Driven Engineering
 
-I build production-grade backend systems using Python, FastAPI, Django, and PostgreSQL. My recent work focuses on AI-powered platforms, Retrieval-Augmented Generation (RAG), Model Context Protocol (MCP) tooling, and scalable API architectures.
+### Building systems. Exploring ideas. Understanding what happens underneath.
 
-Currently working at CurrlyBrace Tech Solutions and exploring the intersection of Software Engineering and Applied AI.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&pause=1000&center=true&vCenter=true&width=800&lines=Software+Engineer;Backend+Systems+Builder;AI+Infrastructure+Explorer;FastAPI+%7C+Django+%7C+RAG+%7C+MCP;Always+Asking+Why+It+Works" />
 
----
-
-## Tech Stack
-
-### Backend
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-
-### AI & Data
-
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square)
-![RAG](https://img.shields.io/badge/RAG-Applications-blue?style=flat-square)
-![MCP](https://img.shields.io/badge/MCP-Model_Context_Protocol-green?style=flat-square)
-
-### Infrastructure
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+</div>
 
 ---
 
-## Current Focus
+```bash
+$ whoami
+```
 
-- Building AI-powered backend platforms
-- Developing Retrieval-Augmented Generation (RAG) systems
-- Exploring Model Context Protocol (MCP) tooling and automation
-- Designing scalable FastAPI architectures
-- Learning advanced system design and distributed systems
+I'm **Siju Suresh**.
+
+A Software Engineer focused on backend systems, AI infrastructure, and understanding how technology works under the hood.
+
+Most people learn technologies.
+
+I prefer learning systems.
+
+When I encounter something new, I usually ask:
+
+- Why was it designed this way?
+- What happens internally?
+- What problem does it solve?
+- What breaks when it scales?
+
+This profile is a collection of experiments, projects, and notes from that journey.
 
 ---
 
-## Featured Projects
+```bash
+$ current_focus
+```
 
-### JD Builder
-AI-powered platform that refines job descriptions and generates intelligent hiring workflows using LLMs.
+```yaml
+status: building
 
-### RAGBoard
-Role-aware multi-tenant knowledge assistant powered by vector search and large language models.
+active_projects:
+  - MCP Server Generator
+  - RAGBoard
+  - JD Builder
+  - AI Assessment Systems
+
+research_topics:
+  - Agentic Workflows
+  - Multi-Agent Systems
+  - Retrieval-Augmented Generation
+  - System Design
+  - AI Infrastructure
+```
+
+---
+
+```bash
+$ cat engineering_philosophy.txt
+```
+
+```text
+Software is more than code.
+
+A REST API is a distributed conversation.
+
+A database is compressed business knowledge.
+
+An LLM is a reasoning engine with constraints.
+
+Architecture is the art of managing complexity.
+
+The deeper I go, the more interesting engineering becomes.
+```
+
+---
+
+```bash
+$ ls projects/
+```
 
 ### MCP Generator
-Platform that converts OpenAPI specifications into production-ready MCP server implementations.
 
-### Iveye
-Adaptive AI-powered learning platform with quiz generation and user progression tracking.
+Turning OpenAPI specifications into production-ready MCP servers through automated code generation and AI-assisted workflows.
 
 ---
 
-## GitHub Stats
+### RAGBoard
 
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=ssijup&show_icons=true&hide_border=true" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ssijup&layout=compact&hide_border=true" height="160" />
+A role-aware knowledge platform that enables organizations to query internal documents using AI, vector search, and retrieval pipelines.
+
+---
+
+### JD Builder
+
+An AI-powered platform that transforms hiring requirements into structured job descriptions and intelligent screening workflows.
+
+---
+
+### Iveye
+
+An adaptive learning platform focused on AI-assisted education, quiz generation, and personalized learning experiences.
+
+---
+
+```bash
+$ tree knowledge/
+```
+
+```text
+knowledge
+├── backend
+│   ├── FastAPI
+│   ├── Django
+│   ├── PostgreSQL
+│   └── REST APIs
+│
+├── ai
+│   ├── OpenAI
+│   ├── LangChain
+│   ├── RAG
+│   ├── MCP
+│   └── Vector Search
+│
+├── infrastructure
+│   ├── Docker
+│   ├── AWS
+│   ├── Linux
+│   └── Nginx
+│
+└── architecture
+    ├── System Design
+    ├── Scalable Services
+    ├── Distributed Systems
+    └── Software Patterns
+```
+
+---
+
+```bash
+$ tech_stack
+```
+
+<p align="left">
+
+<img src="https://skillicons.dev/icons?i=python,fastapi,django,postgres,docker,aws,linux,git,vscode" />
+
 </p>
 
 ---
 
-## Connect
+```bash
+$ github_stats
+```
 
-- LinkedIn: https://www.linkedin.com/in/siju-suresh-901128200
-- GitHub: https://github.com/ssijup
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=ssijup&show_icons=true&hide_border=true" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ssijup&layout=compact&hide_border=true" />
+</p>
+
+---
+
+```bash
+$ currently_learning
+```
+
+```text
+→ Advanced System Design
+→ AI Infrastructure
+→ MCP Ecosystem
+→ Agentic Systems
+→ Scalable Backend Architectures
+```
+
+---
+
+```bash
+$ connect
+```
+
+🌐 LinkedIn  
+https://www.linkedin.com/in/siju-suresh-901128200/
+
+💻 GitHub  
+https://github.com/ssijup
+
+---
+
+```bash
+$ exit
+```
+
+> Curiosity is my framework.
+>
+> Engineering is how I explore.
+>
+> Software is how I leave notes behind.
